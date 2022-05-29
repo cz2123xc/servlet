@@ -18,7 +18,7 @@ public class MemberSaveControllerV4 implements ControllerV4 {
         Member member = new Member(username, age);
         memberRepository.save(member);
 
-        model.put("member", member);
+        model.put("member", member); // Model에 데이터를 보관한다. 생명주기가 유지되는듯
         return "save-result";
     }
 
